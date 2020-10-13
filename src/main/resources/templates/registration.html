@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<head>
+    <title>Authorization</title>
+</head>
+<body>
+<div th:if="${message != null}" th:text="${message}"></div>
+
+<div class="text-center">
+    <form th:action="@{/registration}" method="post" class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
+        <label for="inputEmail" class="sr-only">First name</label>
+        <input type="text" name="FirstName"  class="form-control" placeholder="FIRST NAME"  required="" autofocus="">
+        <label for="inputEmail" class="sr-only">Last name</label>
+        <input type="text" name="LastName" id="inputEmail" class="form-control" placeholder="USERNAME"  required="" autofocus="">
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input type="text" name="username" id="inputUsername" class="form-control" placeholder="USERNAME"  required="" autofocus="">
+
+        <label for="inputEmail" class="sr-only">Age</label>
+        <input type="number" name="age"  class="form-control" placeholder="AGE"  required="" autofocus="">
+
+        <label for="inputEmail" class="sr-only">Mobile Number</label>
+        <input type="number" name="number1"  class="form-control" placeholder="NUMBER"  required="" autofocus="">
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <label for="inputPassword" class="sr-only">Check Password</label>
+        <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Password" required="">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">©Octo 2017-2020</p>
+    </form>
+
+    <style >
+        .form-signin{
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+        }
+
+        .form-control{
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+
+    </style>
+</div>
+</body>
+</html>
+
+
+
